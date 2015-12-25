@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(SignalRDemo.Startup))]
+[assembly: OwinStartup(typeof(SignalRDemo.StockTicker.Startup))]
 
-namespace SignalRDemo
+namespace SignalRDemo.StockTicker
 {
     public class Startup
     {
