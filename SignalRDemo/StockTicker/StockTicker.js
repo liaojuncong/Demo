@@ -11,7 +11,6 @@ if (!String.prototype.supplant) {
 }
 
 $(function () {
-    debugger;
     var ticker = $.connection.stockTickerMini, // the generated client-side hub proxy
         up = '▲',
         down = '▼',
@@ -47,6 +46,7 @@ $(function () {
     }
 
     // Start the connection
+    $.connection.hub.logging = true;
     $.connection.hub.start().done(init);
 
 });
