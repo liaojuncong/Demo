@@ -1,6 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Text;
 using System.Web;
 
 namespace WeChat
@@ -12,6 +16,7 @@ namespace WeChat
     {
         HttpContext context = null;
         string postStr = "";
+        public string access_token { get; set; }
 
         public void ProcessRequest(HttpContext context)
         {

@@ -1,0 +1,32 @@
+﻿{
+     "button":[
+       {
+            "type":"view",
+            "name":"付停车费",
+            "url":"http://www.baidu.com"
+   
+       },{
+           "name":"个人中心",
+           "sub_button":[
+           {    
+               "type":"view",
+               "name":"个人信息",
+               "url":"http://www.baidu.com"
+            },
+            {
+               "type":"view",
+               "name":"订单查询",
+               "url":"http://www.baidu.com"
+            },
+            {
+               "type":"view",
+               "name":"使用帮助",
+               "url":"http://www.baidu.com"
+            },
+            {
+               "type":"view",
+               "name":"下载APP",
+               "url":"http://www.baidu.com"
+            }]
+       }]
+ }
