@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -196,6 +197,7 @@ namespace WeChat
 
     public class ErrorMessage
     {
+        public string errcode { get; set; }
         public string errmsg { get; set; }
         public const string ExceptionCode = "";
         public ErrorMessage() { }
@@ -207,11 +209,17 @@ namespace WeChat
 
         public static bool IsErrorMessage(string result)
         {
-            return false;
+            JObject jo = JObject.Parse(result);
+            return jo["errcode"].ToString() != "0";
         }
         public static ErrorMessage Parse(string result)
         {
-            return new ErrorMessage { errmsg = "error" };
+            JObject jo = JObject.Parse(result);
+            return new ErrorMessage
+            {
+                errcode = jo["errcode"].ToString(),
+                errmsg = jo["errmsg"].ToString()
+            };
         }
     }
 }

@@ -75,7 +75,7 @@ namespace WeChat
             var textpl = "<xml><ToUserName><![CDATA[" + FromUserName + "]]></ToUserName>" +
                 "<FromUserName><![CDATA[" + ToUserName + "]]></FromUserName>" +
                 "<CreateTime>" + ConvertDateTimeInt(DateTime.Now) + "</CreateTime><MsgType><![CDATA[text]]></MsgType>" +
-                "<Content><![CDATA[欢迎来到微信世界---" + Content + "<a href='www.baidu.com'>baidu</a>]]></Content><FuncFlag>0</FuncFlag></xml> ";
+                "<Content><![CDATA[欢迎来到微信世界---" + Content + "]]></Content><FuncFlag>0</FuncFlag></xml> ";
             context.Response.Write(textpl);
             context.Response.End();
         }

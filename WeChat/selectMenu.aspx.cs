@@ -18,7 +18,7 @@ namespace WeChat
             AccessToken token = AccessToken.Get(username);
 
             GetPage("https://api.weixin.qq.com/cgi-bin/menu/get?access_token=" + token.access_token + "");
-            //GetPage("https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=access_token");
+            //GetPage("https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=" + token.access_token + "");
         }
         public string GetPage(string posturl)
         {
