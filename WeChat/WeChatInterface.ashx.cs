@@ -88,9 +88,9 @@ namespace WeChat
 
         private void WriteLog(string strMemo)
         {
-            string filename = "D:/WEBHOME/logs/log.txt";
-            if (!System.IO.Directory.Exists("D:/WEBHOME/logs/"))
-                System.IO.Directory.CreateDirectory("D:/WEBHOME/logs/");
+            string filename = "C:/logs/log.txt";
+            if (!System.IO.Directory.Exists("C:/logs/"))
+                System.IO.Directory.CreateDirectory("C:/logs/");
             System.IO.StreamWriter sr = null;
             try
             {
